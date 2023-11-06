@@ -35,10 +35,40 @@ body {
   margin: 0 auto;
 }
 
-.navegación-principal {
+.navegacion-principal {
     background-color: var(--secundario);
+    justify-content: space-between;
+    display: flex;
+    /*justify-content es para las filas(row) align-item es para las columnas*/
+    font-size: 2rem;
+    font-weight: bold;
+    flex-direction: column;
 }
 
 .nav-bg {
     background-color: var(--secundario);
+    
 }
+
+.navegacion-principal a{
+   color: var(--blanco);
+   text-decoration: none;
+   padding:  1rem;
+}
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color:  var(--oscuro);
+}
+@media (min-widht:768 px) {
+    .navegacion-principal{
+        flex-direction: row;
+    }
+ 
+    }
+
+
+
+
+
+
+
