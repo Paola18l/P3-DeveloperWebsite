@@ -65,7 +65,12 @@ body {
     }
  
     }
-
+/* hero*/
+.hero{
+    background-image: url(../img/hero.jpg);/*es para regresar un nivel de directorio,la carpeta img esta fuera de css*/
+    background-repeat: no-repeat;/*para evitar que se repita  l imgaen si se hace zoom*/
+    background-size: cover;/* sirve para cubriri la imagen con todo el tamaño de la pantallasss*/
+}
 
 
 
