@@ -108,8 +108,27 @@ h1,h2,h3{
     color: var(--blanco);
 
 }
-
-
-
+.ubicacion{
+   display: flex;
+   align-items: flex-end;
+   ss
+}
+.boton{
+    background-color: var primerio;
+    text-decoration: none;/*quitar subrayado*/
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    color:var(--blanco);
+    font-weight: bold;
+     font-size: 2rem;
+     text-transform:uppercase;/*poner en mayuscula*/
+     text-align:center;/*centrar el texto*/
+     width: 90% ;/*es el ancho del boton que abarque el 90% si la pantalla es pequeña*/
+}
+@media (min-width: 768px ){
+    .boton {
+        width: auto;
+    }
+}
 
 
