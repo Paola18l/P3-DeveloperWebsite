@@ -13,8 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
     <!--Para tener un mejor rendimiento-->
-    <link rel="preload" href="css/main.css" as="style">
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preload" href="css/main.css" as="style">/*<link>, los atributos rel (relación) y href (referencia de hipertexto) */
+    <link rel="stylesheet" href="css/main.css" /> /*Para vincular el CSS a un archivo HTML, usamos la etiqueta <link> dentro de la sección HTML */
 </head>
 
 <body> /*El contenido de la página. ...*/
@@ -36,6 +36,8 @@
         <div class="contenedor-hero">
             <h2>Diseño y desarrollo Web</h2>
             <div class="ubicacion">
+                /*Esta parte del código es para poner los iconos que estamos usando */
+    /*vamos ala pagina table icono y elegimos el adecuado copiamos y pegamos código debajo de su etiqueta adecuada*/
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="44"
                     height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" fill="none"
                     stroke-linecap="round" stroke-linejoin="round">
@@ -66,6 +68,9 @@
                         <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
                         <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
                     </svg>
+                    /*Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.
+                    ESTO SE PONE EN AUTOMATICO.
+                    */
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nesciunt architecto ducimus
                         et,
                         blanditiis eaque magni? Consequatur nam doloribus id aliquid nihil quo dolorum, praesentium
@@ -130,7 +135,7 @@
     </section>
 
     <form>
-        <fieldset>
+        <fieldset>   /*<legend> (leyenda) crea un título para un grupos los campos ( <fieldset> ) de un formulario*/
             <legend>
                 Llena el formulario para comunicarte conmigo.
             </legend>
