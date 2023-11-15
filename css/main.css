@@ -1,4 +1,9 @@
-:root {
+
+/*Colores en css------------puedes utilizar los colores de muchas formas ,
+por nombre color;blue,también HEX #00  ,RGB,RGBA Alpha es que tan trasparente quieres que sea el color */ 
+/*:rootes una pseudo clase se inventa solo para nosotros */
+/*tabla de colores para usar con solo llamarlos*/
+:root {     /*Root----significa raíz */
     --blanco: #fff;
     --oscuro: #212121;
     --primario: #ffc107;
@@ -8,8 +13,8 @@
 }
 
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
+    font-size: 62.5%; /*tamaño de fuente*/
+    box-sizing: border-box;/*En el modelo de cuadro predeterminado, el ancho y el alto de un elemento se calculan sumando el ancho y el alto del contenido.*/
     /* Hack para
     el manejo de box model */
     background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
@@ -19,12 +24,16 @@ html {
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+    box-sizing: inherit;/*Este valor permite unabox-sizingpropiedad de su padre.*/
 }
 
 body {
-    font-size: 16px;
+    font-size: 16px;/*tamaño de fuente*/
     font-family: 'Krub', sans-serif;
+    /*font-family se utiliza para definir la fuente de un elemento*/
+    /*'Krub'Esta es la fuente principal o específica que desea utilizar*/
+    /*'KrubSe pone en el body porque así cambio todos los títulos con ese tipo* /
+    /*Las fuentes sans-serif no tienen estas líneas ni decoraciones adicionales. */
 }
 
 .sombra {
@@ -42,43 +51,46 @@ body {
 
 /* Tipografías */
 h1 {
-    font-size: 3.8rem;
+    font-size: 3.8rem;/*tamaño de fuente*/
 }
 
 h2 {
-    font-size: 2.8rem;
+    font-size: 2.8rem;/*tamaño de fuente*/
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.8rem;/*tamaño de fuente*/
 }
 
 h1,
 h2,
 h3 {
-    text-align: center;
+    text-align: center;/*estará centrado horizontalmente.*/
 }
 
 /* Títulos */
-
+/*.titulo lo ponemos para ambos para darle prioridad al ultimo */
+/*Si le ponemos .span estamos especificando que parte estamos trabajando */
 .título span {
-    font-size: 2rem;
+    font-size: 2rem;/*tamaño de fuente*/
 }
 
 .contenedor {
-    max-width: 120rem;
+    max-width: 120rem;  /*el ancho máximo de un elemento.*/
     /* margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
     margin-left: auto;*/
-    margin: 0 auto;
+    margin: 0 auto; /*los márgenes superior e inferior en 0 y los márgenes izquierdo y derecho en automático.*/
 }
 
 .navegación-principal {
-    background-color: var(--secundario);
+    background-color: var(--secundario);/*configurando sus colores de fondo en consecuencia.*/
     /* margin-top: 10rem */
     /* margin: 0 auto */
     display: flex;
+    /*Este valor convierte el elemento en un contenedor flexible. Los elementos secundarios 
+    se convierten en elementos flexibles y puede utilizar propiedades flexibles para el diseño.*/
     flex-direction: column;
     /* justify-content es para las filas (row) y align-item es para las columnas */
     justify-content: space-between;
@@ -112,16 +124,13 @@ h3 {
 
 /* Hero */
 .hero {
-    background-image: url(../img/hero.png);
+    background-image: url(../img/hero.jpg);
     /* 
-    ../ es para regresar al nivel de directorio, 
-    la carpeta img  está afuera del CSS */
+    ../ es para regresar al nivel de directorio,  la carpeta img  está afuera del CSS */
     background-repeat: no-repeat;
-    /* Para evitar que 
-    se repita la imagen si se hace zoom-out */
+    /* Para evitar que se repita la imagen si se hace zoom-out */
     background-size: cover;
-    /* Sirve para cubrir la imagen 
-    con todo el tamaño de la pantalla */
+    /* Sirve para cubrir la imagen con todo el tamaño de la pantalla */
     height: 45rem;
     /* Alto del elemento hero */
     position: relative;
@@ -204,7 +213,7 @@ color: var(--blanco);
 .servicio {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
 }
 
 .servicio h3 {
@@ -216,7 +225,7 @@ color: var(--blanco);
     line-height: 2; /* Interlineado */
     text-align: center;
 }
- /*
+
 .servicio .iconos {
     height: 15rem;
     width: 15rem;
@@ -226,4 +235,109 @@ color: var(--blanco);
     justify-content: space-evenly;
     align-items: center;
 }
-*/
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%); /* Ahorra media querys. ¿Qué es más pequeño, 60rem o el 
+   100% del tamaño de la pantalla? Ejemplo: Sí tengo un dispositivo móvil con 488px de 
+   ancho, es más pequeño el 100%, por lo que tomará ese valor y no los 60 rem. Caso 
+   contrario, tengo una tablet con 768px, ahí sí es menor 60 rem, por lo que se tomará ese 
+   valor */
+    margin: 0 auto; 
+    /* Usarlo si el padre no es un display flex (siendo así se usaría el justify-content, 
+   el formulario tiene block por defaulf */
+    padding: 2rem;
+    border-radius: 1rem;
+    
+   }
+   .formulario fieldset {
+    border: none;
+   }
+   .formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--primario);
+   }
+.campo{
+
+margin-bottom: 1rem;
+}
+.campo label{
+ color: var(--blanco);
+ font-weight: bold;
+ margin-bottom: .5rem;
+ display: block; /* Logra que cada label tome todo el espacio disponible y estar 
+separado del input */
+}
+.input-text{
+ width: 100%;
+ border: none;
+ padding: 1.5rem;
+ border-radius: .5rem;
+}
+.campo textarea {
+ height: 20rem; /* Hacer más grande la altura del textarea*/
+}
+.botton{
+    background-color: var(--secundario); /* Color de fondo del botón */
+    color: var(--blanco); /* Color del texto */
+    padding: 1rem 3rem; /* Espacio interior */
+    margin-top: 3rem; /* Separación superior*/
+    font-size: 2rem; /* Tamaño de la letra */
+    text-decoration: none; /* Quitar el subrayado */
+    text-transform: uppercase; /* Convertir texto en mayúsculas */
+    font-weight: bold; /* Texto en negritas */
+    border-radius: .5rem; /* Esquinas redondeadas */
+    width: 90%; /* Ancho del botón, que abarque el 90% posible si se encuentra en una 
+   pantalla pequeña */
+    text-align: center; /* Centrar el texto del botón */
+    border: none; /* Esto afecta únicamente al boton de la etiqueta "input", si esta 
+   propiedad no existe en el enlace "a" , simplemente lo ignora */
+   }
+   @media (min-width: 768px) {
+    .botton {
+    width: auto;
+    } 
+   }
+   .botton:hover{
+    cursor: pointer;
+   }
+   * Utilidades */
+.w-sm-100{
+ width: 100%;
+}
+@media (min-width: 768px) {
+ .w-sm-100{
+ width: auto; 
+ }
+}
+.flex{
+ display: flex;
+}
+.alinear-derecha{
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 1rem;
+    grid-template-rows: auto auto 20rem; /* Darle el espacio de cada fila*/
+    }
+    /* También se podría crear la clase de ayuda campo-correo para llamar el selector, 
+   pero se recomienda no crear nuevas clases si no es estrictamente necesario.
+    nth-child significa el # del hijo. El orden sería: nombre, teléfono, correo, mensaje. 
+   Como requerimos modificar correo y mensaje, usaremos 3 y 4 en nth-child */
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+    grid-column: 1/3; /* Para posicionar el elemento, "que vaya de la columna 1 a la 
+   3*/
+    }
+   }
+   * Footer */
+.footer {
+    text-align: center;
+}
